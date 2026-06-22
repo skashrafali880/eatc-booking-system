@@ -58,7 +58,7 @@ public final class Booking {
     public boolean isActive() {
         return status == BookingStatus.BOOKED || status == BookingStatus.ATTENDED;
     }
-
+    
     public void changeLesson(Lesson lesson) {
         if (status != BookingStatus.BOOKED) {
             throw new BookingException("Only a BOOKED booking can be changed");
